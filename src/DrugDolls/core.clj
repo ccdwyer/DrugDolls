@@ -180,3 +180,8 @@
     ) 
   )
 )
+
+(defn -main 
+  []
+  (decide-where-to-get-input-from)
+)
