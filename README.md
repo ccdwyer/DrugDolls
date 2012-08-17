@@ -3,11 +3,11 @@ Due to an issue with lein, run with the following command:
 lein trampoline run -m DrugDolls.core
 
 The format for data files is the following:
+
     maximumWeight
     dollname1 dollweight1 dollvalue1
     dollname2 dollweight2 dollvalue2
     dollname3 dollweight3 dollvalue3
-    ...etc
 
 You are a drug trafficker. Every day you meet with a different nice older lady (the mule) and find out how much weight she can carry in her handbag. You then meet with your supplier who has packed various drugs into a myriad of collectible porcelain dolls. Once packed with drugs, each of the precious dolls has a unique combination of weight and street value. Sometimes your supplier has more dolls than the nice lady can carry, though space in her handbag is never an issue. Your job is to choose which dolls the kind soul will carry, maximizing street value, while not going over her weight restriction.
 
