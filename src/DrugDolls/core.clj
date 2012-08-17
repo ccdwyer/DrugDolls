@@ -1,5 +1,6 @@
 (ns DrugDolls.core
-  (:import (java.io BufferedReader FileReader)))
+  (:import (java.io BufferedReader FileReader))
+  (:require [clojure.string :as string]))
 (use 'clojure.java.io)
 
 (defstruct doll :name :weight :value)
@@ -107,7 +108,7 @@
 (defn recognize-doll-information
   [entry]
   (try
-    (let [[doll-name doll-weight doll-value] (clojure.string/split entry #"\s")]
+    (let [[doll-name doll-weight doll-value] (string/split entry #"\s")]
       (hash-map :name    doll-name
                 :weight  (Integer. (re-find #"[1-9][0-9]*" doll-weight))
                 :value   (Integer. (re-find #"[1-9][0-9]*" doll-value))
